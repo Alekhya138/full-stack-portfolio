@@ -72,4 +72,7 @@ def contact():
 # RUN APP
 # -------------------------------
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Get the port from Render's environment, or default to 5000 locally
+    port = int(os.environ.get("PORT", 5000))
+    # Listen on 0.0.0.0 so Render can access it
+    app.run(host="0.0.0.0", port=port, debug=True)
