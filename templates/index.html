@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alekhya Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+     <nav>
+        <div>
+        <a href="#">Alekhya</a>
+        </div>
+        <div>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1 id="mainhead">Alekhya's  Portfolio</h1>
+        <p>Hi, I'm Alekhya! I'm a passionate web developer. I love creating beautiful and functional websites.</p>
+        <button id="probtn">View Projects</button>
+        <button>Contact Me</button>
+        <button id="themeb">Change Theme</button>
+        
+
+
+
+
+    </div>
+    <section class="about" id="about">
+      <h2>About Me</h2>
+      <p>I am a passionate web developer with experience in creating responsive and user-friendly websites.</p>
+    </section>
+    <section class="skills" id="skills">
+        <h2>Skills</h2>
+        <p>Here are some of my skills:</p>
+        <div class="skill-container">
+            <div class="skill">C</div>
+            <div class="skill">Java</div>
+            <div class="skill">Python</div>
+            <div class="skill">AI/ML</div>
+        </div>
+    </section>
+    <section class="projects" id="projects">
+      <h2>Projects</h2>
+      <div class="projects-container">
+        <div class="project-card">
+            <h3>Expense Tracker System</h3>
+            <p>Developed a JavaFX-based Expense Tracker using Java EE to record, categorize, and analyze user expenses with database integration.</p>
+             <button id="exp1b">View Project</button>
+        </div>
+        <div class="project-card">
+            <h3>Personalised Learning Path Recommender</h3>
+            <p>Developed a KNN-based machine learning system to recommend personalized learning paths using student skills and interests.</p>
+            <button id="exp2b">View Project</button>
+        </div>
+        <div class="project-card">
+            <h3>Interview Answer Similarity Analyzer</h3>
+            <p>Developed an Interview Answer Similarity Analyzer that evaluates candidate responses by comparing them with ideal answers using NLP techniques, providing a similarity score and feedback for improvement.</p>
+            <button id="exp3b">View Project</button>
+        </div>
+
+      </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2>Let's connect!</h2>
+        <p>Feel free to reach out to me!</p>
+        <div class="contact-container">
+           <div class="contact-card"><h4>Email:<a href="mailto:allukrishna2006@gmail.com">Email Me</a></h4> </div>
+            <div class="contact-card"><h4>LinkedIn:<a href="https://linkedin.com/in/alekhya-yedida" target="_blank">LinkedIn Profile</a></h4> </div>
+            <div class="contact-card"><h4>GitHub:<a href="https://github.com/alekhya138" target="_blank">GitHub Profile</a></h4> </div>
+        </div>
+        <form id = "contactForm" method="post" action="/contact">
+            
+            <input type="text" id="nameInput" name="name" placeholder=" Enter Your Name" required>
+            
+            <input type="email" id="email" name="email" placeholder=" Enter Your Email" required>
+            <textarea id="message" name="message" placeholder=" Enter Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Alekhya Yedida. All rights reserved.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+   
+</body>
+</html>
